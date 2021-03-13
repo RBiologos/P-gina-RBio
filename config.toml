@@ -1,5 +1,5 @@
 ################################# Default configuration ###################
-baseURL = "https://davidvaneal.github.io/RBiologos/"
+baseURL = "https://rbiologos.github.io"
 title = "R Biólogos"
 theme = "meghna-hugo"
 #themesDir = "../.."
