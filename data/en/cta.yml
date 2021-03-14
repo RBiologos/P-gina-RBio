@@ -1,11 +1,11 @@
 ############################# call to action ##############################
 cta:
   enable : true
-  bg_image : "images/backgrounds/bg-white-wall.jpg"
-  bg_image_webp : "images/backgrounds/bg-white-wall.webp"
-  title : "Great Design & Incredible Features"
-  content : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis tenetur odio impedit incidunt? Omnis accusantium ea reiciendis, fugit commodi nostrum."
+  bg_image : "images/backgrounds/paramo.jpg"
+  bg_image_webp : "images/backgrounds/paramo.webp"
+  title : "Se un colaborador"
+  content : "Si tienes alguna idea en mente y quieres desarrollarla. Te invitamos a ser partícipe de este proyecto. Bienvenido!"
   button:
     enable : true
-    label : "Start a project with us"
+    label : "Comienza un proyecto con nosotros"
     link : "#contact"

@@ -1,22 +1,20 @@
 ##################################### pricing ##############################
 pricing:
   enable : true
-  title : Our Plans
+  title : Pa' saber
   pricing_table :
     # pricing table loop
-    - name : Free
-      price : $99
-      unit : month
+    - name : Grupo estudio Botánica
+      image: images/eventos/sd.jpg
       services:
-        - 1GB Disk Space
-        - 10 Email Account
-        - Script Installer
-        - 1 GB Storage
-        - 10 GB Bandwidth
-        - 24/7 Tech Support
+        - Nombre completo
+        - Semestre
+        - Correo electrónico
+        - Número de celular
+        - Campo de interés
       button:
-        label : "Signup"
-        link : "#"
+        label : "Inscríbete"
+        link : "mailto:huq@uniquindio.edu.co?"
       
     # pricing table loop
     - name : Silver

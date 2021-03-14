@@ -1,30 +1,30 @@
 - id: blogTitle
-  translation: Latest Post
+  translation: Últimos posts
 - id: readMore
-  translation: Read more
+  translation: Leer más
 - id: viewAllPost
-  translation: View All Post
+  translation: Todos los posts
 - id: share
   translation: Share
 - id: aboutAuthor
-  translation: About author
+  translation: Acerca de
 - id: authorsPosts
-  translation: Author's posts
+  translation: Post del autor
 - id: all
-  translation: All
+  translation: Todo
 - id: about
-  translation: About Us
+  translation: Acerca de nosotros
 - id: services
-  translation: Service
+  translation: Servicio
 - id: portfolio
-  translation: Portfolio
+  translation: Portafolio
 - id: team
-  translation: Team
+  translation: Equipo
 - id: pricing
-  translation: Pricing
+  translation: Precios
 - id: blog
   translation: Blog
 - id: contact
-  translation: Contact
+  translation: Contacto
 - id: themefisher
   translation: Themefisher
