@@ -1,6 +1,6 @@
 #################################### portfolio ###############################
 portfolio:
-  enable : false
+  enable : true
   title : Nuestra tienda
   portfolio_item :
     # portfolio item loop
