@@ -19,7 +19,7 @@ Espacio para diseñar las entradas de la página!!
 # Cargar datos en la página
 
 1. Abrir ```GitHub Desktop```
-2. Aprobar los cambios en los repositorios de la página
-3. Subir datos a plataforma
+2. ```Commit``` los cambios en los repositorios de la página
+3. ```Pull origin``` los datos a plataforma
 
 Y finalizado el proceso
