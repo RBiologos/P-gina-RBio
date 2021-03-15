@@ -1,6 +1,6 @@
-# Pagina-RBio
+# Página-RBio
 
-Espacio para diseñar las entradas del blog!!
+Espacio para diseñar las entradas de la página!!
 
 # Primeros pasos
 
