@@ -1,11 +1,13 @@
 ---
-title: cx
+title: prueba
 author: Eduardo Grajales
 date: '2021-03-14'
 slug: []
 categories: []
 tags: []
+image: images/blog/blog-post-3.jpg
 ---
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, fig.align="center", message = FALSE)
 ```
@@ -63,8 +65,7 @@ Para poder instalar estos paquetes hay varias formas de hacerlo. La más común 
 
 ------------------------------------------------------------------------
 ```{r eval=FALSE}
-install.packages("lme4") 
-# Ten en cuenta que el nombre del paquete va siempre entre comillas
+install.packages("lme4") # Ten en cuenta que el nombre del paquete va siempre entre comillas
 ```
 ------------------------------------------------------------------------
 
@@ -88,8 +89,7 @@ Lo único que nos queda por hacer es "llamar" el paquete. Esta tarea la realizam
 
 ------------------------------------------------------------------------
 ```{r eval=FALSE}
-library(lme4) 
-# Observa que el nombre ya no está entre comillas
+library(lme4) # Observa que cuando llamamos al paquete, ya no necesitamos que el nombre esté entre comillas
 ```
 ------------------------------------------------------------------------
 

@@ -4,13 +4,13 @@ about:
   title : ¿Qué somos?
   about_item :
   - icon : ti-ruler-pencil # themify icon pack : https://themify.me/themify-icons
-    title : We're Creative
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+    title : Somos creativos
+    content : Nuestro lema es "Calidad antes que cantidad", por ello, nuestra página está en constante actualización
 
   - icon : ti-cup # themify icon pack : https://themify.me/themify-icons
-    title : We're Professional
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+    title : Somos profesionales
+    content : Equipo de profesionales en biología que tienen como objetivo utilizar las mejores herramientas para la toma de decisiones
 
   - icon : ti-thought # themify icon pack : https://themify.me/themify-icons
-    title : We're Genius
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+    title : Somos equipo
+    content : No trabajamos solos, trabajamos con personas que aportan ideas para el crecimiento de la ciencia

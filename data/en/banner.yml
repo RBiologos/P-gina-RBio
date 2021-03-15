@@ -5,7 +5,7 @@ banner:
   bg_image : "images/backgrounds/portada.jpg"
   icon : "" # themify icon pack : https://themify.me/themify-icons
   title : "R Biólogos"
-  content : "Blog diseñado para brindar herramientas que faciliten el uso de R y Rstudio para diversos estudios en las diferentes áreas de la biología y afines. Esperamos pasen del odio al amor hacía R... en una línea de código"
+  content : "Espacio diseñado para brindar herramientas que faciliten el uso de R y Rstudio para diversos estudios en las diferentes áreas de la biología y afines. Esperamos pasen del odio al amor hacía R... en una línea de código"
   button:
     enable : true
     label : "Explora"

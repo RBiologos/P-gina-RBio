@@ -3,25 +3,25 @@ feature:
   enable : true
   image : images/about/equipo.jpg
   image_webp : images/about/equipo.webp
-  title : Somos un equipo de Biólogos, apasionados por R.
-  content : "Somos un equipo de trabajo que tiene como objetivo ayudar a diferentes personas a entender más sobre el mundo de R"
+  title : Apasionados por la vida y R.
+  content : "Brindamos las herramientas que faciliten el uso del software R y Rstudio para diversos estudios en las diferentes áreas de la biología y afines. Esperamos pasen del odio al amor hacía R... en una línea de código"
   feature_item : 
       # feature item loop
-    - title : SEO Optimized
+    - title : ¿Por qué R?
       icon : ti-world # themify icon pack : https://themify.me/themify-icons
-      content : Biólogos comprometidos con la vida, con la responsabilidad humana hacía su entorno
+      content :  Es un programa estadístico muy robusto que nos permite realizar muchos estudios en pro de la ciencia
       
       # feature item loop
     - title : Fácil entedimiento
       icon : ti-thought # themify icon pack : https://themify.me/themify-icons
-      content : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus consectetur dolores repellendus eos saepe
+      content : Esta página se crea por la necesidad de entender de manera más práctica el mundo de R
 
       # feature item loop
     - title : Código a la mano
       icon : ti-split-v-alt # themify icon pack : https://themify.me/themify-icons
-      content : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus consectetur dolores repellendus eos saepe
+      content : Todos los códigos que se utilizan en esta página, están alojados en GitHub 
       
       # feature item loop
     - title : Anuncios sobre eventos científicos
       icon : ti-announcement # themify icon pack : https://themify.me/themify-icons
-      content : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus consectetur dolores repellendus eos saepe
+      content : ¿Quieres anunciar tus eventos científicos? Dejános un mensaje y nos comunicaremos contigo
