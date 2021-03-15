@@ -21,5 +21,6 @@ Espacio para diseñar las entradas de la página!!
 1. Abrir ```GitHub Desktop```
 2. ```Commit``` los cambios en los repositorios de la página
 3. ```Pull origin``` los datos a plataforma
+4. Actualiza GitHub y revisa el post en la página
 
 Y finalizado el proceso
