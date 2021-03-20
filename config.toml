@@ -125,4 +125,4 @@ languageCode = "en-us"
 contentDir = "content/english"
 weight = 1
 home = "Home"
-copyright = "Copyright &copy; 2020 Diseñado por [Themefisher](https://themefisher.com) para [HUGO](https://gethugothemes.com)"
+copyright = "Copyright &copy; 2020 Diseñado por [David Vanegas](https://github.com/davidvaneal) bajo la plantilla [Themefisher](https://themefisher.com) de [HUGO](https://gethugothemes.com)"
