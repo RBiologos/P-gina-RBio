@@ -5,11 +5,11 @@
 - id: viewAllPost
   translation: Todos los posts
 - id: share
-  translation: Share
+  translation: Comparte
 - id: aboutAuthor
   translation: Acerca de
 - id: authorsPosts
-  translation: Post del autor
+  translation: Posts Autor
 - id: all
   translation: Todo
 - id: about

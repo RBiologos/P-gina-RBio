@@ -5,8 +5,8 @@ team:
   team_member :
     # team member loop
     - name : David Vanegas
-      image_webp : images/team/team-1.webp
-      image : images/team/team-1.jpg
+      image_webp : images/team/davidvaneal.webp
+      image : images/team/davidvaneal.png
       designation : CEO/Fundador
       content : Biólogo, Universidad del Quindío.
       social :
@@ -22,9 +22,9 @@ team:
           link : "https://www.instagram.com/davidvaneal/"
 
     # team member loop
-    - name : Eduardo Grajales
-      image_webp : images/team/team-2.webp
-      image : images/team/team-2.jpg
+    - name : Eduardo Grajales 
+      image_webp : images/team/gheduardo.webp
+      image : images/team/gheduardo.png
       designation : COO/Fundador
       content : Biólogo, Universidad del Quindío
       social :

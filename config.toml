@@ -49,19 +49,19 @@ url = "blog"
 weight = 1
 
 [[Languages.en.menu.main]]
-name = "¿Qué es R Biólogos?"
-pre = "#"
-url = "about"
-weight = 2
-
-[[Languages.en.menu.main]]
 name = "Equipo"
 pre = "#"
 url = "team"
+weight = 2
+
+[[Languages.en.menu.main]]
+name = "¿Qué somos?"
+pre = "#"
+url = "about"
 weight = 3
 
 [[Languages.en.menu.main]]
-name = "¿Quiénes somos y qué hacemos?"
+name = "¿Qué hacemos?"
 pre = "#"
 url = "feature"
 weight = 4
@@ -80,9 +80,9 @@ weight = 7
 
 ############################# Default Parameters ##########################
 [params]
-logo = "images/logo.png"
+logo = "https://i.ibb.co/FxCR4MP/loader.gif"
 # Meta data
-description = "RBiólogos - El espacio para biólogos y R"
+description = "El espacio para perfecto para biólogos y R"
 author = "R Biólogos"
 # Google Analytics
 google_analytics_id = "" # Your ID
@@ -92,7 +92,7 @@ post_share = true
 # preloader
 [params.preloader]
 enable = true
-preloader = "images/logo.png"
+preloader = "https://i.ibb.co/FxCR4MP/loader.gif"
 
 # cookies
 [params.cookies]

@@ -5,8 +5,8 @@ portfolio:
   portfolio_item :
     # portfolio item loop
     - name : 2G Shop
-      image : images/Shop/Profile2.png
-      image_webp : images/Shop/Profile2.webp
+      image : images/Shop/Profile.png
+      image_webp : images/Shop/Profile.webp
       categories : [""]
       content : Encuentra los mejores productos aquí
       link : "https://rbiologos.github.io/shop/2g/"

@@ -1,8 +1,8 @@
 ############################# feature ###################################
 feature:
   enable : true
-  image : images/about/equipo.jpg
-  image_webp : images/about/equipo.webp
+  image : "https://i.ibb.co/pwByKPc/1462710-1438528976361244-1879148447-o.jpg"
+  image_webp : "https://i.ibb.co/ryTWS0R/1462710-1438528976361244-1879148447-o-1.webp"
   title : Apasionados por la vida y R.
   content : "Brindamos las herramientas que faciliten el uso del software R y Rstudio para diversos estudios en las diferentes áreas de la biología y afines. Esperamos pasen del odio al amor hacía R... en una línea de código"
   feature_item : 

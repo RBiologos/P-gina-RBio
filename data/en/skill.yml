@@ -21,3 +21,7 @@ skill:
     # skill item loop
     - name :  Trabajo
       percent : 75%
+      
+      # skill item loop
+    - name :  Buen humor
+      percent : 25%
