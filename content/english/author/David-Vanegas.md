@@ -5,7 +5,7 @@ image : images/team/davidvaneal.png
 email: "davidvaneal@gmail.com"
 social:
   - icon : "ti-facebook" # themify icon pack : https://themify.me/themify-icons
-    link : "#"
+    link : "https://www.facebook.com/davidvaneal/"
   - icon : "ti-twitter-alt" # themify icon pack : https://themify.me/themify-icons
     link : "https://twitter.com/Davidvaneal"
   - icon : "ti-github" # themify icon pack : https://themify.me/themify-icons
