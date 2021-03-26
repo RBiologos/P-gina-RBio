@@ -41,7 +41,7 @@ link = "plugins/lazy-load/lozad.min.js"
 [[params.plugins.js]]
 link = "plugins/google-map/map.js"
 
-################### English Navigation ########################
+################### Navegación en español ########################
 [[Languages.en.menu.main]]
 name = "Blog"
 pre = "#"
@@ -76,16 +76,55 @@ weight = 5
 name = "Contacto"
 pre = "#"
 url = "contact"
-weight = 7
+weight = 6
+
+################### English Navigation ########################
+[[Languages.fr.menu.main]]
+name = "Blog"
+pre = "#"
+url = "blog"
+weight = 1
+
+[[Languages.fr.menu.main]]
+name = "Team"
+pre = "#"
+url = "team"
+weight = 2
+
+
+[[Languages.fr.menu.main]]
+name = "About us"
+pre = "#"
+url = "about"
+weight = 3
+
+[[Languages.fr.menu.main]]
+name = "Why?"
+pre = "#"
+url = "feature"
+weight = 4
+
+[[Languages.fr.menu.main]]
+name = "Portfolio"
+pre = "#"
+url = "portfolio"
+weight = 5
+
+[[Languages.fr.menu.main]]
+name = "Contact"
+pre = "#"
+url = "contact"
+weight = 6
+
 
 ############################# Default Parameters ##########################
 [params]
 logo = "https://i.ibb.co/FxCR4MP/loader.gif"
 # Meta data
-description = "El espacio para perfecto para biólogos y R"
+description = "El espacio perfecto para Biólogos y R"
 author = "R Biólogos"
 # Google Analytics
-google_analytics_id = "" # Your ID
+google_analytics_id = "G-N49JEEK9KF" # Your ID
 # post share
 post_share = true
 
@@ -120,9 +159,18 @@ link = "https://github.com/RBiologos/Posts"
 
 ################################ English Language ########################
 [Languages.en]
-languageName = "En"
+languageName = "ES"
 languageCode = "en-us"
 contentDir = "content/english"
 weight = 1
 home = "Home"
 copyright = "Copyright &copy; 2020 Diseñado por [David Vanegas](https://github.com/davidvaneal) bajo la plantilla [Themefisher](https://themefisher.com) de [HUGO](https://gethugothemes.com)"
+
+################################ France Language ########################
+[Languages.fr]
+languageName = "EN"
+languageCode = "fr-fr"
+contentDir = "content/french"
+weight = 2
+home = "Accueil"
+copyright = "Copyright &copy; 2020 Designed by [David Vanegas](https://github.com/davidvaneal) from [Themefisher](https://themefisher.com) to [HUGO](https://gethugothemes.com)"

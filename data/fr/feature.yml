@@ -3,25 +3,25 @@ feature:
   enable : true
   image : "https://i.ibb.co/pwByKPc/1462710-1438528976361244-1879148447-o.jpg"
   image_webp : "https://i.ibb.co/ryTWS0R/1462710-1438528976361244-1879148447-o-1.webp"
-  title : Apasionados por la vida y R
+  title : Passionate about life and R
   content : "Brindamos las herramientas que faciliten el uso del software R y Rstudio para diversos estudios en las diferentes áreas de la biología y afines. Esperamos pasen del odio al amor hacía R... en una línea de código"
   feature_item : 
       # feature item loop
-    - title : ¿Por qué R?
+    - title : Why R? 
       icon : ti-world # themify icon pack : https://themify.me/themify-icons
-      content :  Es un programa estadístico muy robusto que nos permite realizar muchos estudios en pro de la ciencia
+      content :  It is a very robust statistical program that allows us to carry out many studies in favor of science
       
       # feature item loop
-    - title : Fácil entendimiento
+    - title : Easy understanding
       icon : ti-thought # themify icon pack : https://themify.me/themify-icons
-      content : Esta página se crea por la necesidad de entender de manera más práctica el mundo de R
+      content : This page is created out of the need to understand the world of R in a more practical way
 
       # feature item loop
-    - title : Código a la mano
+    - title : Code at hand
       icon : ti-split-v-alt # themify icon pack : https://themify.me/themify-icons
-      content : Todos los códigos que se utilizan en esta página, están alojados en GitHub 
+      content : All the codes used on this page are hosted on GitHub
       
       # feature item loop
-    - title : Anuncios sobre eventos científicos
+    - title : Announcements about scientific events
       icon : ti-announcement # themify icon pack : https://themify.me/themify-icons
-      content : ¿Quieres anunciar tus eventos científicos? Dejános un mensaje y nos comunicaremos contigo
+      content : Do you want to advertise your scientific events? Leave us a message and we will contact you

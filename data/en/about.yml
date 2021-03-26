@@ -1,10 +1,10 @@
 ############################# About ###################################
 about:
   enable : true
-  title : ¿Qué somos?
+  title : What are we?
   about_item :
   - icon : ti-ruler-pencil # themify icon pack : https://themify.me/themify-icons
-    title : Somos creativos
+    title : We are creative
     content : Nuestro lema es "Calidad antes que cantidad", por ello, nuestra página está en constante actualización
 
   - icon : ti-cup # themify icon pack : https://themify.me/themify-icons
