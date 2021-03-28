@@ -1,0 +1,11 @@
+############################# call to action ##############################
+cta:
+  enable : true
+  bg_image : "images/backgrounds/paramo.jpg"
+  bg_image_webp : "images/backgrounds/paramo.webp"
+  title : "Únete al equipo"
+  content : "Si tienes alguna idea en mente y quieres desarrollarla. Te invitamos a ser partícipe de este proyecto"
+  button:
+    enable : true
+    label : "Comienza un proyecto con nosotros"
+    link : "#contact"

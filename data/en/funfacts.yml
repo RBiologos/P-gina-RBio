@@ -5,7 +5,7 @@ funfacts:
   bg_image_webp : "images/backgrounds/colibri.webp"
   counter_item:
     # counter item loop
-    - title : "Momentos felices"
+    - title : "Happy moments"
       icon : "ti-face-smile" # themify icon pack : https://themify.me/themify-icons
       count : "2056"
     
@@ -15,11 +15,11 @@ funfacts:
       count : "4"
     
     # counter item loop
-    - title : "Seguidores"
+    - title : "Followers"
       icon : "ti-instagram" # themify icon pack : https://themify.me/themify-icons
       count : "272"
     
     # counter item loop
-    - title : "Horas de música"
+    - title : "Hours of music"
       icon : "ti-music-alt" # themify icon pack : https://themify.me/themify-icons
       count : "2508"

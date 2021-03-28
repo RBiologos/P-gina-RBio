@@ -1,17 +1,17 @@
 ##################################### pricing ##############################
 pricing:
   enable : true
-  title : Pa' saber
+  title : To know
   pricing_table :
     # pricing table loop
-    - name : Grupo estudio Botánica
+    - name : Botany study group
       image: images/eventos/sd.jpg
       services:
-        - Nombre completo
-        - Semestre
-        - Correo electrónico
-        - Número de celular
-        - Campo de interés
+        - Full name
+        - Semester
+        - Email
+        - Cell phone number
+        - Field of interest 
       button:
-        label : "Inscríbete"
+        label : "Sign up"
         link : "mailto:huq@uniquindio.edu.co?"

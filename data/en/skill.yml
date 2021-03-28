@@ -1,10 +1,10 @@
 ################################# Skill ##################################
 skill:
   enable : true
-  title : Nuestras habilidades
+  title : Our skills
   skill_item :
     # skill item loop
-    - name :  Diversión
+    - name :  Fun
       percent : 100%
       
     # skill item loop
@@ -12,16 +12,16 @@ skill:
       percent : 95%
       
     # skill item loop
-    - name :  Análisis
+    - name :  Analysis
       percent : 80%
       
-    - name :  Responsabilidad
+    - name :  Responsibility
       percent : 100%
       
     # skill item loop
-    - name :  Trabajo
+    - name :  Job
       percent : 75%
       
       # skill item loop
-    - name :  Buen humor
+    - name :  Good humor
       percent : 25%

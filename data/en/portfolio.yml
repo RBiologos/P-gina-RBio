@@ -1,12 +1,12 @@
 #################################### portfolio ###############################
 portfolio:
-  enable : true
-  title : Tiendas
+  enable : false
+  title : Stores
   portfolio_item :
     # portfolio item loop
     - name : 2G Shop
       image : images/Shop/Profile.png
       image_webp : images/Shop/Profile.webp
       categories : ["2G"]
-      content : Encuéntralo aquí
+      content : Find it here
       link : "https://rbiologos.github.io/shop/2g/"

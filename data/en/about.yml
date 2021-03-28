@@ -1,16 +1,16 @@
 ############################# About ###################################
 about:
   enable : true
-  title : What are we?
+  title : About Us
   about_item :
   - icon : ti-ruler-pencil # themify icon pack : https://themify.me/themify-icons
-    title : We are creative
-    content : Nuestro lema es "Calidad antes que cantidad", por ello, nuestra página está en constante actualización
+    title : We're Creative
+    content : Our motto is "Quality before quantity", therefore, our page is constantly updated
 
   - icon : ti-cup # themify icon pack : https://themify.me/themify-icons
-    title : Somos profesionales
-    content : Equipo de profesionales en biología que tienen como objetivo utilizar las mejores herramientas para la toma de decisiones
+    title : We're Professional
+    content : A team of professionals in biology who aim to use the best decision-making tools
 
   - icon : ti-thought # themify icon pack : https://themify.me/themify-icons
-    title : Somos equipo
-    content : No trabajamos solos, trabajamos con personas que aportan ideas para el crecimiento de la ciencia
+    title : we're a Team
+    content : We don't work alone, we work with people who contribute ideas for the growth of science

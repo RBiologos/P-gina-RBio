@@ -14,6 +14,6 @@ social:
     link : "https://www.instagram.com/gh_bio/"
 ---
 
-Soy biólogo de profesión y apasionado por los ecosistemas de alta montaña. Me considero una persona bastante curiosa, alegre, siempre con deseo de aprender, conocer, explorar diferentes lugares cargados de mucha naturaleza y, sobre todo, compartir mis conocimientos tanto a colegas (o afines a la profesión) como a personas que por diferentes factores desconocen totalmente la importancia del medio ambiente y el rol de la educación ambiental.
+I'm a biologist by profession and passionate about high mountain ecosystems. I consider myself a fairly curious, happy person, always with the desire to learn, know, explore different places full of nature and, above all, share my knowledge with colleagues (or those related to the profession) and with people who, due to different factors, are unaware fully the importance of the environment and the role of environmental education.
 
-Como objetivo de vida, desearía poder implementar un modelo de turismo científico enfocado en la sensibilización de la sociedad sobre la naturaleza a través de sus secretos científicos, sus servicios ecosistémicos y su fabuloso mundo genético.
+As a life goal, I would like to be able to implement a scientific tourism model focused on raising awareness of society about nature through its scientific secrets, its ecosystem services and its fabulous genetic world.

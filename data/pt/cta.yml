@@ -1,0 +1,11 @@
+############################# call to action ##############################
+cta:
+  enable : true
+  bg_image : "images/backgrounds/paramo.jpg"
+  bg_image_webp : "images/backgrounds/paramo.webp"
+  title : "Junte-se ao time"
+  content : "Se você tem uma ideia em mente e deseja desenvolvê-la. Nós convidamos você a ser um participante deste projeto"
+  button:
+    enable : true
+    label : "Comece um projeto conosco"
+    link : "#contact"

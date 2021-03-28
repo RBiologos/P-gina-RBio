@@ -1,0 +1,12 @@
+############################### Banner ################################
+banner:
+  enable : true
+  bg_image_webp : "images/backgrounds/portada.webp"
+  bg_image : "images/backgrounds/portada.jpg"
+  icon : "" # themify icon pack : https://themify.me/themify-icons
+  title : "R Biólogos"
+  content : "Espaço destinado a disponibilizar ferramentas que facilitem a utilização do R e do Rstudio para diversos estudos nas diferentes áreas da biologia e afins. Esperamos que você passe de ódio a amor para R ... em uma linha de código"
+  button:
+    enable : true
+    label : "Explore-nos"
+    link : "#blog"

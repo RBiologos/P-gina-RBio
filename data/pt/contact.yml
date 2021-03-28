@@ -1,0 +1,25 @@
+############################## Contact #############################
+contact:
+  enable : true
+  title : Contato
+  subtitle : Detalhes
+  content : Para atingir o objetivo de aprendizagem do R, faremos o upload de posts relacionados ao tema semanalmente. Além disso, tentaremos responder a todas as dúvidas e / ou sugestões que você tiver por meio de comentários ou via e-mail de contato do blog. Em breve estaremos dando novidades sobre novos projetos. Obrigado pelo seu tempo e bom dia!
+
+  # Contact details
+  contact_list:
+    - icon : ti-location-pin # themify icon pack : https://themify.me/themify-icons
+      info : "Armenia, Quindío, Colombia"
+      
+    - icon : ti-email # themify icon pack : https://themify.me/themify-icons
+      info : "Email: rstudiobio@gmail.com"
+
+
+  # Contact form
+  contact_form:
+    enable : true
+    form_action : "https://formspree.io/f/mnqoegdl" #contact form works with https://formspree.io
+    name : "Aqui ... Seu nome"
+    email : "Seu email"
+    subject : "Assunto, que não sabemos o que escrever"
+    message : "Mensagem ... Pode ser algo como ... Eu salvei o mundo!"
+    submit : "Mandar"

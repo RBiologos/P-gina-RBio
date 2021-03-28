@@ -1,5 +1,5 @@
 ---
-title: ¿Pa' que creamos esta página?
+title: Why did we create this page?
 author: ''
 date: '2021-03-16'
 image: "images/blog/A1.webp"
@@ -8,41 +8,41 @@ categories: []
 tags: []
 ---
 
-## **¿Quiénes somos?**
+## **About us?**
 <br>
 
-> Somos David Vanegas y Eduardo Grajales, dos **biólogos** de la Universidad del Quindío apasionados por el mundo de la programación y R
+> We are David Vanegas and Eduardo Grajales, two **biologists** from the University of Quindío passionate about the world of programming and R
 
-Al igual estamos interesados la ciencia dirigida hacía la conservación, el ecoturismo y la educación ambiental, como promotoras de una sociedad en pro del desarrollo sostenible enfocado al bienestar de las comunidades en sus territorios. Apostamos por una sociedad generadora de ideas y proyectos que estén fundamentados en información obtenida a partir de la ciencia básica, para que nos permita tomar buenas decisiones sobre nuestros recursos naturales y sus servicios ecosistémicos, especialmente en un país tan rico en biodiversidad como Colombia 
+Likewise, we are interested in science directed towards conservation, ecotourism and environmental education, as promoters of a society in favor of sustainable development focused on the well-being of the communities in their territories. We are committed to a society that generates ideas and projects that are based on information obtained from basic science, so that it allows us to make good decisions about our natural resources and their ecosystem services, especially in a country as rich in biodiversity as Colombia. 
 
 <center>
 <img src="https://i.ibb.co/7N5FQ7L/DSC00016.jpg" alt="DSC00016" border="0" class="responsive">
 </center>
 
-Fotografía tomada en el PNNN de Colombia, Frailejón (*Espeletia hartwegiana*) en el nevado Santa Isabel, Santa Rosa de Cabal-Risaralda
+Photograph from PNNN of Colombia, Frailejón (*Espeletia hartwegiana*) in the snowy Santa Isabel, Santa Rosa de Cabal-Risaralda
 
 ____________________________________________________________________________
 
-#### **¿Pa´que creamos R Biólogos?**
+#### **Why do we create R Biologists?**
 <br>
 
-Este espacio es creado inicialmente por la necesidad que observamos mientras desarrollábamos nuestro pregrado (o ¿el pregrado nos desarrollaba a nosotros?, es una pregunta que no sabemos si tiene respuesta, ¿Está claro?). Muchas veces después de una u otra trasnochada o madrugada, nos preguntábamos: ¿Por qué todos hablan del Software R?, ¿Por qué algunas personas hablan tan mal? y ¿Por qué otras personas hablan maravillas?, ¿Realmente es tan necesario para ser profesional? 
+This space is initially created by the need that we observe while developing our undergraduate (or was the undergraduate developing us? It is a question that we do not know if it has an answer, is that clear?). Many times after one or another late night or early morning, we asked ourselves: Why does everyone talk about Software R? Why do some people talk so badly about it? and Why do other people speak wonders? Is it really so necessary to be a professional?
 
-Dato curioso: hablaban más mal, que bien. Siempre se escuchaban los madrazos y gemidos de dolor emocional, algunos dicen que soñaban con él y que les hacia loops la vida con tanta condición.
+>Fun fact: they spoke more badly than good. The bad words and moans of emotional pain were always heard, some say that they dreamed of him and that he made life loops with such condition.
 
-Ya teniendo estás preguntas en la cabeza, hay que decir que de manera independiente quedamos muy enganchados con el tema de la programación y el uso de R, sin embargo, había un reto que asumir y ese era: ¡Ver de qué trata ese tal R!, había que mirarlo directo a los pixeles y decirle, ¡No te tengo miedo!, porque las malas lenguas decían que esa "cosa" leía la necesidad y el miedo, porque cuando más lo necesitabas, más problemas ponía, se parece a la impresora.
+Already having these questions in mind, it must be said that independently we were very hooked on the subject of programming and the use of R, however, there was a challenge to take on and that was: to See what this R guy is about! You had to look at it directly at the pixels and say, I'm not afraid of you! Because the gossip said that that "thing" read need and fear, because when you needed it most, more problems it had, it resembles a printer.
 
-Así, buscando deliberadamente, googleando, nos dábamos cuenta de que hay mucha información (Que esperamos poder ir organizando en este blog), no sabe uno ni por donde empezar, información que en su gran mayoría estaba en Inglés así que AGÁRRATE! Si **NO** tienes algún dominio del Inglés, pues te vamos a dar una pequeña recomendación: Dirígete al rincón más solo de tu casa o bloque de la universidad y sigue las instrucciones de la siguiente imagen 
+Thus, deliberately searching, googling, we realized that there is a lot of information (which we hope to be able to organize in this blog), one does not know where to start, information that was mostly in English, so HOLD ON! If you **DO NOT** have any command of English, then we are going to give you a small recommendation: Go to the loneliest corner of your house or block of the university and follow the next image instructions
 
 <center>
-![](https://i.ibb.co/jT7JkQS/download.jpg){width="400"}
+![](https://i.kym-cdn.com/entries/icons/facebook/000/012/073/7686178464_fdc8ea66c7.jpg){width="400"}
 </center><br>
 
-Pero uno piensa: “nah no puede ser tan malo...” y pues en realidad podría volverse peor, si uno necesita aprender de afán porque hay que entregar el informe de diversidad y curvas de acumulación para mañana o mejor dicho para hoy por que ya es la una de la mañana (eso nos contaban, a nosotros nunca nos pasó), y si no queda bien ese informe pierde uno laboratorio y si pierde laboratorio, pierde uno la materia y así se empieza a desencadenar una serie de pensamientos terroríficos que no queremos ni recordar. 
+But one thinks: "nah it can't be that bad ..." and well it could actually get worse, if one needs to learn hard because the diversity report and accumulation curves have to be delivered for tomorrow or rather for today because It's already one in the morning (that's what they told us, it never happened to us), and if that report doesn't look good, one loses a laboratory and if one loses a laboratory, one loses matter and thus begins to unleash a series of terrifying thoughts that we don't even want to remember.
 
-Pero bueno, tranquis que ya llegamos nosotros a fomentar tu perecita de leer en inglés y trataremos de que la relación que vas a tener con R no sea tan tóxica como lo es un vasito con agua saborizado con mercurio. 
+But hey, calm down that we have already encouraged your little idea to read in English and we will try to ensure that the relationship you are going to have with R is not as toxic as a glass of water flavored with mercury is.
 
-Agradecimientos a Eliana Tabares por su revisión.
+Thanks to Eliana Tabares for her review
 
 <center>
 <img src="https://i.ibb.co/Lpb8FRY/Picture12.png" alt="Picture12" border="0" width="200">

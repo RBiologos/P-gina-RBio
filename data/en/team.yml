@@ -1,17 +1,17 @@
 ############################### team ############################
 team:
   enable : true
-  title : Nuestro equipo
+  title : Our team
   team_member :
     # team member loop
     - name : David Vanegas
       image_webp : images/team/davidvaneal.webp
       image : images/team/davidvaneal.png
-      designation : CEO/Fundador
-      content : Biólogo, Universidad del Quindío.
+      designation : CEO/Founder
+      content : Biologist, University of Quindío
       social :
         - icon : ti-user # themify icon pack : https://themify.me/themify-icons
-          link : "https://rbiologos.github.io/author/david-vanegas/"
+          link : "https://rbiologos.github.io/en/author/david-vanegas/"
         - icon : ti-facebook # themify icon pack : https://themify.me/themify-icons
           link : "https://www.facebook.com/davidvaneal/"
         - icon : ti-twitter-alt # themify icon pack : https://themify.me/themify-icons
@@ -25,11 +25,11 @@ team:
     - name : Eduardo Grajales 
       image_webp : images/team/gheduardo.webp
       image : images/team/gheduardo.png
-      designation : COO/Fundador
-      content : Biólogo, Universidad del Quindío
+      designation : COO/Founder
+      content : Biologist, University of Quindío
       social :
         - icon : ti-user # themify icon pack : https://themify.me/themify-icons
-          link : "https://rbiologos.github.io/author/eduardo-grajales/"
+          link : "https://rbiologos.github.io/en/author/eduardo-grajales/"
         - icon : ti-facebook # themify icon pack : https://themify.me/themify-icons
           link : "https://m.facebook.com/oscar.gh.35"
         - icon : ti-twitter-alt # themify icon pack : https://themify.me/themify-icons

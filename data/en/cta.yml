@@ -3,9 +3,9 @@ cta:
   enable : true
   bg_image : "images/backgrounds/paramo.jpg"
   bg_image_webp : "images/backgrounds/paramo.webp"
-  title : "Únete al equipo"
-  content : "Si tienes alguna idea en mente y quieres desarrollarla. Te invitamos a ser partícipe de este proyecto"
+  title : "Join the team"
+  content : "If you have an idea in mind and want to develop it. We invite you to be a participant in this project"
   button:
     enable : true
-    label : "Comienza un proyecto con nosotros"
+    label : "Start a project with us"
     link : "#contact"

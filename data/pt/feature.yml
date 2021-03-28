@@ -1,0 +1,27 @@
+############################# feature ###################################
+feature:
+  enable : true
+  image : "https://i.ibb.co/pwByKPc/1462710-1438528976361244-1879148447-o.jpg"
+  image_webp : "https://i.ibb.co/ryTWS0R/1462710-1438528976361244-1879148447-o-1.webp"
+  title : Apaixonado pela vida e R
+  content : ""
+  feature_item : 
+      # feature item loop
+    - title : Por que R?
+      icon : ti-world # themify icon pack : https://themify.me/themify-icons
+      content :  É um programa estatístico muito robusto que nos permite realizar muitos estudos a favor da ciência.
+      
+      # feature item loop
+    - title : Fácil entendimento
+      icon : ti-thought # themify icon pack : https://themify.me/themify-icons
+      content : Esta página foi criada a partir da necessidade de entender o mundo do R de uma forma mais prática
+
+      # feature item loop
+    - title : Código em mãos
+      icon : ti-split-v-alt # themify icon pack : https://themify.me/themify-icons
+      content : Todos os códigos usados nesta página estão hospedados no GitHub
+      
+      # feature item loop
+    - title : Anúncios sobre eventos científicos
+      icon : ti-announcement # themify icon pack : https://themify.me/themify-icons
+      content : Quer divulgar seus eventos científicos? Deixe-nos uma mensagem e entraremos em contato com você

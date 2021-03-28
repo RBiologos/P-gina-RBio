@@ -1,0 +1,25 @@
+################################# funfacts ##################################
+funfacts:
+  enable : true
+  bg_image : "images/backgrounds/colibri.jpg"
+  bg_image_webp : "images/backgrounds/colibri.webp"
+  counter_item:
+    # counter item loop
+    - title : "Momentos felices"
+      icon : "ti-face-smile" # themify icon pack : https://themify.me/themify-icons
+      count : "2056"
+    
+    # counter item loop
+    - title : "Total Posts"
+      icon : "ti-archive" # themify icon pack : https://themify.me/themify-icons
+      count : "4"
+    
+    # counter item loop
+    - title : "Seguidores"
+      icon : "ti-instagram" # themify icon pack : https://themify.me/themify-icons
+      count : "272"
+    
+    # counter item loop
+    - title : "Horas de música"
+      icon : "ti-music-alt" # themify icon pack : https://themify.me/themify-icons
+      count : "2508"

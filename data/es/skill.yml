@@ -1,0 +1,27 @@
+################################# Skill ##################################
+skill:
+  enable : true
+  title : Nuestras habilidades
+  skill_item :
+    # skill item loop
+    - name :  Diversión
+      percent : 100%
+      
+    # skill item loop
+    - name :  RStudio
+      percent : 95%
+      
+    # skill item loop
+    - name :  Análisis
+      percent : 80%
+      
+    - name :  Responsabilidad
+      percent : 100%
+      
+    # skill item loop
+    - name :  Trabajo
+      percent : 75%
+      
+      # skill item loop
+    - name :  Buen humor
+      percent : 25%
