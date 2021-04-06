@@ -1,0 +1,430 @@
+---
+title: Tipo y estructura de Datos
+author: Eduardo Grajales
+date: '2021-04-06'
+image: "https://i.ibb.co/TbcjsGJ/A005.png"
+slug: []
+categories:
+  - R
+tags:
+  - R
+  - RStudio
+  - Datos
+  - Estructura
+---
+
+<script src="{{< blogdown/postref >}}index.es_files/header-attrs/header-attrs.js"></script>
+
+
+<p>Ya viste cómo trabajar en R y Rstudio, aprendiste a configurar tu directorio de trabajo, sabes instalar librerias y cómo llamarlas, aprendiste qué son los scripts y lo útiles para trabajar en R.</p>
+<p>Es decir, ya tienes tus primeros pinitos de conocimiento sobre R, ya aumentaste un 1% de tu fitnes, tienes 1% de probabilidad más a tu favor, y si no lo haz leído, acá te lo dejo <a href="https://rbiologos.github.io/blog/a002/"><em>…y ahora un poco de teoría</em></a>.</p>
+<center>
+<img src="https://i.ibb.co/DtSmB7p/bean.gif" width="260" />
+</center>
+<p><br></p>
+<p>Cómo lo prometido es deuda, en el post títulado <a href="https://rbiologos.github.io/blog/a003/"><em>¿Qué necesito para comenzar en R?</em></a>, viste que existen 7 tipos de datos (integer, numeric, logic, character, factor, NA y NULL); ahora bien, en este post comenzaremos con <strong>la verificación de los tipos de datos</strong>, es decir, vas a saber qué tipos de datos está leyendo R.</p>
+<p>Para lograr tal objetivo, necesitas tener una base de datos para estudiar, en R puedes encontrar varias bases para prácticar, pero en esta oportunidad usaremos <res>iris</res>; que es una base de datos con valores asociados al largo (length) y ancho (width) de los sépalos y los pétalos de varias especies vegetales que podremos explorar, luego aprenderás cómo cargar tú propio archivo a R.</p>
+<div id="exploración-de-datos" class="section level2">
+<h2>Exploración de datos</h2>
+<p>Vamos a empezar este post dando un pequeño resumen sobre la exploración de datos, pero ten en cuenta que iremos más profundo en un próximo post. Para realizar esta tarea existen algunas funciones propias Rbase, como <res>head()</res>, <res>tail()</res>, entre otras. Sin embargo hay muchas otras funciones para poder hacer una adecuada exploración y transformación de datos.</p>
+<p>Para empezar vamos a explorar un poco la base de datos <res>iris</res> y ver que elementos la componen</p>
+<blockquote>
+<p>Nota: Todo lo que esté después del signo en nuestro <res>#</res> en nuestro código, <strong>R</strong> lo omite, así como cuando tu amorcito omite tus mensajes de buenos días.</p>
+</blockquote>
+<pre class="r"><code>head(iris) # (Cabecera) Se utiliza para mostrar las primeras 6 filas de los datos.</code></pre>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<pre class="r"><code>tail(iris) # (Cola) por el contrario muestra las 6 últimas</code></pre>
+<pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+## 145          6.7         3.3          5.7         2.5 virginica
+## 146          6.7         3.0          5.2         2.3 virginica
+## 147          6.3         2.5          5.0         1.9 virginica
+## 148          6.5         3.0          5.2         2.0 virginica
+## 149          6.2         3.4          5.4         2.3 virginica
+## 150          5.9         3.0          5.1         1.8 virginica</code></pre>
+<p>Tambien tenemos la función <res>View()</res>, la cual es una función bastante últil; es más, considero que debería ser la primera en usar al cargar nuestros datos a <strong>R</strong> con el objetivo de visualizar los datos en una nueva ventana y así poder hacer una primera inspección. Hagamos el siguiente ejercicio y utilicemos esta función</p>
+<pre class="r"><code>iris
+View(iris)</code></pre>
+<p>¿Notaste alguna diferencia al llamar sólo <res>iris</res> y usar <res>View(iris)</res>?. Supongo que lograste ver la gran diferencia que existe en inspeccionar los datos en una ventana de Rstudio a tener que verlos sobre la consola.</p>
+<blockquote>
+<p>En este punto, me gustaria hacerte una aclaración: también existen librerias especializadas en la exploración de datos.</p>
+</blockquote>
+<p>Por ejemplo, la libreria <res>tidyverse</res> que contiene a su vez un set completo de librerías entre ellas <res>dplyr</res>, es una de las librerias más usadas por los científicos de datos por su fácil manejo y cómo ellos lo llaman por su “Curva de aprendizaje” que se refiere a la cantidad de información disponible y al número de personas estudiandolo.</p>
+<p>Otra función muy interesante para conocer los tipos de datos que contiene nuestro dataset es: <res>class()</res>, esta función nos mostrará en la consola qué tipo de datos tenemos, ya que a simple vista es muy díficil saberlo, y si realizamos este pre proceso antes de comenzar a correr nuestros análsis, vamos a poder evitar varios inconvenientes con varias librerias de R, que son muy claras y muy sensibles con el tipo de datos que necesitamos para hacer nuestros análisis.</p>
+<blockquote>
+<p><img src="https://i.ibb.co/Wkj4z61/alerta.gif" width="100" />
+Atención, atención!!!</p>
+El simbolo <res>&lt;-</res> lo usamos para asignar variables, o en otras palabras, ponerle nombre a las cosas. Si digitamos <res>Alt</res> <em>+</em> <res>-</res> nos aparecerá dicho simbolo en Rstudio.
+</blockquote>
+<pre class="r"><code>número &lt;- 357 # Como es un número esperamos que lo que vamos a obtener sea &quot;numeric&quot;
+class(número)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code>nombre &lt;- &quot;Aotus&quot;# Cómo está entre comillas Aotus, esperamos que lo lea como caracter
+class(nombre)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<pre class="r"><code>combinado &lt;- c(2,1.62, &quot;alelo&quot;, &quot;HardyWeinberg&quot;) 
+# La letra &quot;c&quot; se usa para concatenar (agrupar)
+class(combinado)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p><strong>¿Qué pasó con nuestra variable llamada combinado?</strong></p>
+<p>Allí podemos observar que ocurrieron dos cosas; primero, tenemos diferentes tipos de datos, es claro para nosotros que hay datos de tipo <res>numeric</res> (2 y 1.6) y <res>character</res> (“alelo”, “HardyWeinberg”), pero la función mostró que todos eran <res>character</res>.</p>
+<p><strong>¿Por qué ocurre esto?</strong></p>
+<p>Esto ocurre de manera implicita en <strong>R</strong> por algo llamado <em>coerción</em>; es decir los datos son forzados a transformarse a otro tipo de dato, o cómo dice el viejo refrán: “Al que anda entre miel, algo se le pega”</p>
+<center>
+<img src="https://i.ibb.co/NW1rg3F/honey.gif" width="290" />
+</center>
+<p><br></p>
+<p>Esta coerción tiene un orden de jerararquía, es decir, que R transformará nuestros datos según un orden establecido y no ocurre al azar. Orden que podemos ver a continuación:</p>
+<p><res>logical</res> -&gt; <res>integer</res> -&gt; <res>numeric</res> -&gt; <res>character</res></p>
+<p>Ahora que ya sabes qué ocurrió y que esto puede ocurrir en tus proyectos, es necesario prestar más atención a tus datos, y saber la importancia de revisarlos antes de comenzar a correr un código de una librería. Por otro lado, debes tener en cuenta que la <em>coerción</em> ocurre sin nosotros quererlo, pero no siempre va a ser así, nosotros podemos transformar los datos siempre y cuando sea lógico hacerlo usando la familia <res>as()</res> (más adelante la veremos).</p>
+<p>Siguiendo con nuestros ejercicios, te voy a mostrar un ejemplo más usando la función <res>class()</res>, acompañado de la función <res>lapply()</res> (la cual veremos en otro post más a fondo, si quieres saber como funciona, en tu consola escribe ?lapply) que nos ayudará a evaluar cada una de las columnas de los datos de la librería anteriormente mencionada,aquí pretendemos explorar que tipo de datos tenemos en nuestra data frame o base de datos.</p>
+<pre class="r"><code>lapply(iris, class)</code></pre>
+<pre><code>## $Sepal.Length
+## [1] &quot;numeric&quot;
+## 
+## $Sepal.Width
+## [1] &quot;numeric&quot;
+## 
+## $Petal.Length
+## [1] &quot;numeric&quot;
+## 
+## $Petal.Width
+## [1] &quot;numeric&quot;
+## 
+## $Species
+## [1] &quot;factor&quot;</code></pre>
+<p>Cómo puedes observar, con este par de funciones trabajando de la mano, podemos conocer qué tipos de datos tenemos en nuestra dataframe, esto nos facilitará mucho nuestro flujo de trabajo.</p>
+<div id="transformación-de-datos-o-forzar-coerción." class="section level3">
+<h3>Transformación de datos o forzar coerción.</h3>
+<p>Ahora si, con todo lo que ya sabes, comprenderás mejor a través de ejemplos la transformación de datos, entonces, hágamolo pequeñin:</p>
+<blockquote>
+<p><img src="https://i.ibb.co/Wkj4z61/alerta.gif" width="100" />
+Atención, atención!!!</p>
+El símbolo <res>$</res> lo usamos en R para “llamar” a una columna de nuestra base datos
+</blockquote>
+<p>En este ejemplo quedará un poco más claro. Tenemos una base de datos <res>Proyecto</res> y los lugares que se trabajaron los numeraron, en vez de haberles colocado un nombre, vaya problema!. Así, observaremos nuestros primeros datos y luego veremos el tipo de clase de la columna <res>Lugar</res>, tal y como lo vemos en este código:</p>
+<pre class="r"><code>head(Proyecto)</code></pre>
+<pre><code>##   Lugar Sepal.Width Petal.Length Petal.Width Species
+## 1     5         3.5          1.4         0.2  setosa
+## 2     5         3.0          1.4         0.2  setosa
+## 3     5         3.2          1.3         0.2  setosa
+## 4     5         3.1          1.5         0.2  setosa
+## 5     5         3.6          1.4         0.2  setosa
+## 6     5         3.9          1.7         0.4  setosa</code></pre>
+<pre class="r"><code>class(Proyecto$Lugar)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p>Cómo pudiste observar esta columna de datos es identificada por <strong>R</strong> como <res>numeric</res>, pero ya sabemos que no son números, si no que son nombres de sitios, por eso, tenemos que transformalos para que R no vaya a mezclarlos y quizá generar error en nuestros análisis. Para ello, utilizaremos la función <res>as.character()</res> como lo vemos en el siguiente ejemplo</p>
+<pre class="r"><code>char &lt;- as.character(Proyecto$Lugar)
+class(char)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p>Y quedó listo nuestra intención!</p>
+<p>Pero… ¿Entonces sólo puedo transformar de <strong>numeric</strong> a <strong>character</strong>?</p>
+<center>
+<img src="https://i.ibb.co/bKKYP2B/ciela.gif" width="200" />
+</center>
+<p><br></p>
+<p>También puedes realizar otros tipos de coerción, según lo que necesites o como te lo pidan usando los comandos que verás en la siguiente tabla:</p>
+<center>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Función para transformar</th>
+<th align="center">- Tipo de coerción o transformación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><res>as.integer()</res></td>
+<td align="center">Entero</td>
+</tr>
+<tr class="even">
+<td align="center"><res>as.numeric()</res></td>
+<td align="center">Numérico</td>
+</tr>
+<tr class="odd">
+<td align="center"><res>as.factor()</res></td>
+<td align="center">Factor</td>
+</tr>
+<tr class="even">
+<td align="center"><res>as.logical()</res></td>
+<td align="center">Logico</td>
+</tr>
+<tr class="odd">
+<td align="center"><res>as.null()</res></td>
+<td align="center">Null</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p><br></p>
+<p><strong>¿Cómo usarlos?</strong> Te cuento que se usan tal y como hicimos con <res>as.character()</res></p>
+<div id="conclusión-sobre-tipo-y-transformación-de-datos." class="section level4">
+<h4>Conclusión sobre tipo y transformación de datos.</h4>
+<p>Hasta aquí has aprendido a identificar los tipos de datos usando la función <res>class()</res> y también sobre la <strong>coerción</strong> que ocurre automáticamente en R al crear un vector, que creemos que tiene diferentes tipos de datos; así mismo aprendiste sobre la familia <res>as()</res> para forzar la coerción o transformar los datos al tipo de dato que estas necesitando.</p>
+<p>Adicionalmente, aprendiste sobre la exploración básica de los datos usando las funciones <res>View()</res>,<res>head()</res> y <res>tail()</res>, que te van a servir mucho para evitar incovenientes con <strong>R</strong> y así poder conocer cómo está organizada o compuesta tu base datos y también viste, que en <strong>R</strong> muchas formas de hacer lo mismo, así que no te preocupes, tú acomódate con lo que mas te guste.</p>
+</div>
+</div>
+</div>
+<div id="estructura-de-datos." class="section level2">
+<h2>Estructura de datos.</h2>
+<p>La <strong>estructura</strong> de datos son objetos que contienen un tipo de dato o varios tipos de datos, y poseen diferentes caracteristicas como <strong>dimensiones</strong> si son <strong>homogéneas</strong> o <strong>heterogéneas</strong>.</p>
+<table>
+<colgroup>
+<col width="26%" />
+<col width="26%" />
+<col width="26%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Homogéneas</th>
+<th align="left">Característica</th>
+<th align="center">Heterogéneas</th>
+<th align="left">Característica</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Vector (Una dimensión)</td>
+<td align="left">Colección de uno o mas datos del mismo tipo. Su dimensión es la misma cantidad de datos que posee</td>
+<td align="center">Lista (Una dimensión)</td>
+<td align="left">Al igual que los vectores posee solo una dimensión, pero sus datos pueden ser de diferentes tipos e incluso contener estructuras.</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="left"></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="center">Matriz (Dos dimensiones)</td>
+<td align="left">Vector multidimensional. <strong>Solo puede contener datos de un solo tipo</strong> y posee sólo dos dimensiones,<res>largo</res> (<strong>High</strong>) y <res>alto</res> (<strong>length</strong>)</td>
+<td align="center">Data Frame (Dos dimensiones)</td>
+<td align="left">Poseen dos dimensiones y puede contener datos de diferentes tipos, es la más común para hacer análisis de datos (versión mas flexible de una matriz).</td>
+</tr>
+<tr class="even">
+<td align="center">Array (n dimensiones)</td>
+<td align="left">Iguales características que una matriz, pero puede poseer más de dos dimensiones</td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<div id="ahora-veremos-como-funciona-cada-una-de-estas-estructuras-con-ejemplos-útiles." class="section level3">
+<h3>Ahora, veremos como funciona cada una de estas estructuras con ejemplos útiles.</h3>
+<p><strong><em>Vectores</em></strong></p>
+<p>Los vectores son la estructura de datos mas sencilla en R, como vimos en la anterior tabla, su dimensión depende del número de datos que contenga y sólo puede tener un sólo tipo de dato.</p>
+<p><strong>¿Cómo puedes saber que tienes un vector y cómo puedes crear vectores?</strong></p>
+<p>Ya conoces la función <res>class()</res> que nos ayuda a identificar el tipo de dato que tenemos y algunas veces el tipo de estructura de datos; sin embargo, la familia de funciones <res>is()</res> es la mas adecuada para definir estructura de los datos de la siguiente manera:</p>
+<pre class="r"><code>3</code></pre>
+<pre><code>## [1] 3</code></pre>
+<pre class="r"><code>is.vector(3)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>class(3)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<blockquote>
+<p>Nota: Cómo lo puedes notar, al usar ambas funciones nos arrojan diferentes resultados, ya que la función <res>class()</res> nos indicará el tipo de dato y la función <res>is()</res> al ser lógica, nos dirá si es cierto (TRUE) o falsa (FALSE), este tipo de respuesta se conoce como Booleana.</p>
+</blockquote>
+<p>Otro ejemplo:</p>
+<pre class="r"><code>tres &lt;- 3
+class(tres)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code>is.vector(tres)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<blockquote>
+<p>Otra nota: La forma de crear un vector es muy sencilla; es más, todo este tiempo lo estuviste viendo, necesitamos del operador <res>&lt;-</res> y si vas a agregar varios datos del mismo tipo usas <res>c()</res>. Por otra parte, hay algo muy importante que debes aprender y es la forma en la que vas a asignar los nombres a la estructura de los datos. Lo importante es que signifiquen algo para ti y que alguien más lo pueda comprender.</p>
+</blockquote>
+<p>Más ejemplos:</p>
+<pre class="r"><code>num &lt;- c(1233,555,88,99,17)
+class(num)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code>is.vector(num)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>nomb &lt;- c(&quot;Sofia&quot;, &quot;Camila&quot;, &quot;Juliana&quot;, 
+          &quot;Pablo&quot;, &quot;Andrés&quot;, &quot;Wallace&quot;)
+class(nomb)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<pre class="r"><code>is.vector(nomb)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p>Ahora te toca a ti practicar, crea diferentes vectores, con diferentes tipos de datos, explora todo lo que puedes hacer, por ejemplo intenta sumar vectores numéricos y observa que pasa, como en el siguiente ejemplo:</p>
+<pre class="r"><code>emj1 &lt;- c(112,667,99,56,47,12)
+emj2 &lt;- c(22,65,23.8,99,101,41)
+
+suma &lt;- emj1 + emj2
+suma ## Visualizaremos el resultado de nuestro cálculo mediante la variable</code></pre>
+<pre><code>## [1] 134.0 732.0 122.8 155.0 148.0  53.0</code></pre>
+<p>¿Que ocurrió?, te queda de tarea describir de la mejor manera lo que ocurrió. ¿Qué pasaría si los vectores no tienen el mismo número de datos?</p>
+<p><strong><em>Matrices y arrays</em></strong></p>
+<p>Estas estructuras son usadas en matemáticas y estadística; es más, es una de las estructuras más comunes y solicitadas en muchos de los paquetes que solemos usar en Biología, y también es una de las razones por las cuales nos desesperamos con R y de querer darle al teclado como locos.</p>
+<center>
+<img src="https://i.ibb.co/DLw8dzR/computer.gif" width="170" />
+</center>
+<p><br></p>
+<p><strong><em>Ahora, ¿Cómo reconocer y crear matrices?</em></strong></p>
+<p>Es tan fácil cómo escribir <res>matrix()</res>, esta función acepta dos argumentos, <res>nrow</res> (número de filas) y <res>ncol</res> (número de columnas) para indicar el número de filas y columnas de la matriz que vas a generar, como en el siguiente código</p>
+<blockquote>
+<p>Esto lo podemos hacer sin especificar el número de columnas y filas. Para este ejemplo vas a generar una matriz del 1 al 12 de la siguiente manera: 1:12</p>
+</blockquote>
+<pre class="r"><code>matrix(1:12)</code></pre>
+<pre><code>##       [,1]
+##  [1,]    1
+##  [2,]    2
+##  [3,]    3
+##  [4,]    4
+##  [5,]    5
+##  [6,]    6
+##  [7,]    7
+##  [8,]    8
+##  [9,]    9
+## [10,]   10
+## [11,]   11
+## [12,]   12</code></pre>
+<p>Acá R automáticamente nos muestra una matriz con 12 filas y una columna, pero supongamos que tu quieres que sean 6 filas y 2 columnas.</p>
+<p>Ejemplo:</p>
+<pre class="r"><code>matrix(1:12, nrow = 6, ncol = 2)</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    1    7
+## [2,]    2    8
+## [3,]    3    9
+## [4,]    4   10
+## [5,]    5   11
+## [6,]    6   12</code></pre>
+<p>Ahora crea una matriz con números del 1 al 12 (1:12) con un nrow de 6 y ncol de 4, observa que pasa.</p>
+<p>También podemos crear matrices uniendo vectores con las funciones <res>cbind()</res> (unión cómo columnas) y <res>rbind</res> (unión cómo filas) de la siguiente forma:</p>
+<pre class="r"><code>vec1 &lt;- c(1:5)
+vec2 &lt;- c(10:15)
+vec3 &lt;- c(20:25)
+vec4 &lt;- c(35:40)
+
+matrix1 &lt;- cbind(vec1, vec2, vec3,vec4)
+matrix1</code></pre>
+<pre><code>##      vec1 vec2 vec3 vec4
+## [1,]    1   10   20   35
+## [2,]    2   11   21   36
+## [3,]    3   12   22   37
+## [4,]    4   13   23   38
+## [5,]    5   14   24   39
+## [6,]    1   15   25   40</code></pre>
+<pre class="r"><code>matrix2&lt;-rbind(vec1, vec2, vec3, vec4)
+matrix2</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6]
+## vec1    1    2    3    4    5    1
+## vec2   10   11   12   13   14   15
+## vec3   20   21   22   23   24   25
+## vec4   35   36   37   38   39   40</code></pre>
+<p>Como puedes observar esas funciones nos son muy útiles y permiten realizar tareas puntuales.</p>
+<blockquote>
+<p>Nota: Con las matrices también puedes realizar operaciones aritméticas.</p>
+</blockquote>
+<pre class="r"><code>matrix1 + 1</code></pre>
+<pre><code>##      vec1 vec2 vec3 vec4
+## [1,]    2   11   21   36
+## [2,]    3   12   22   37
+## [3,]    4   13   23   38
+## [4,]    5   14   24   39
+## [5,]    6   15   25   40
+## [6,]    2   16   26   41</code></pre>
+<pre class="r"><code>matrix1 * 2</code></pre>
+<pre><code>##      vec1 vec2 vec3 vec4
+## [1,]    2   20   40   70
+## [2,]    4   22   42   72
+## [3,]    6   24   44   74
+## [4,]    8   26   46   76
+## [5,]   10   28   48   78
+## [6,]    2   30   50   80</code></pre>
+<pre class="r"><code>matrix2 ^ 3</code></pre>
+<pre><code>##       [,1]  [,2]  [,3]  [,4]  [,5]  [,6]
+## vec1     1     8    27    64   125     1
+## vec2  1000  1331  1728  2197  2744  3375
+## vec3  8000  9261 10648 12167 13824 15625
+## vec4 42875 46656 50653 54872 59319 64000</code></pre>
+<p>Como puedes notar la operación aritmética se realiza para cada uno de los datos de la matriz</p>
+<p>Ahora veras la estructura de datos realmente más usada por nosotros en biología, las <res>data frames</res>, ¿Por qué es la más usada? Es la más usada, por que es la estructura que más se adapta a nuestras necesidades; además, de que es la forma en la que nosotros guardamos nuestro datos en excel y posteriormente cargamos generalmente en archivo <res>.csv</res></p>
+<p>Generalmente las filas en una data frame representa individuos u observaciones y las columnas representan los atributos, rasgos o variables.</p>
+<p><strong><em>¿Cómo luce una data frame?</em></strong></p>
+<p>La data frame <res>iris</res> que hemos estado utilizando, es una clara muestra de la organización y de los tipos de datos que puede contener una data frame.</p>
+<p><strong><em>Pero, ¿Cómo puedo crear una data frame en RStudio?</em></strong></p>
+<p>De forma rápida y sencilla, utilizaremos la función <res>data.frame</res>, en la cual podemos ingresar una serie de vectores que compondrán nuestro data frame, en el siguiente ejemplo ingresaremos 4 vectores con 4 clases de datos diferentes, esta es una de la ventajas de un data frame, podemos utilizar distintos tipos de datos.</p>
+<blockquote>
+<p><img src="https://i.ibb.co/Wkj4z61/alerta.gif" width="100" />
+Atención, atención!!!</p>
+Recordemos que los data frames requieren que las variables sean de la misma longitud. Por este motivo, tenemos que asegurarnos que el número de argumentos pasados a cada vector sean los mismos
+</blockquote>
+<pre class="r"><code>mi_df &lt;- data.frame(
+  &quot;entero&quot; = 1:4, 
+  &quot;factor&quot; = c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;), #  Observa que los caracteres deben estar entre &quot;&quot;
+  &quot;numero&quot; = c(1.2, 3.4, 4.5, 5.6),
+  &quot;cadena&quot; = as.character(c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;)))
+  
+mi_df  </code></pre>
+<pre><code>##   entero factor numero cadena
+## 1      1      a    1.2      a
+## 2      2      b    3.4      b
+## 3      3      c    4.5      c
+## 4      4      d    5.6      d</code></pre>
+<p>Así podemos ver que nuestro data frame ha sido creado exitosamente, nuevamente te invitamos a que juegues con estas funciones y te vuelvas más amigos de ellas.</p>
+<p>Finalmente podemos usar la función <res>str()</res> para conocer la estructura de nuestros datos en un data frame, como podemos ver a continuación</p>
+<pre class="r"><code>str(mi_df)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    4 obs. of  4 variables:
+##  $ entero: int  1 2 3 4
+##  $ factor: chr  &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot;
+##  $ numero: num  1.2 3.4 4.5 5.6
+##  $ cadena: chr  &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot;</code></pre>
+<p>Ahora puedes observar la estructura de cada uno de nuestros datos, 4 observaciones de 4 variables, en la que nos especifica el tipo de dato de cada columna o variable.</p>
+</div>
+</div>
+<div id="listas" class="section level2">
+<h2>Listas</h2>
+<p>Para finalizar nuestro post nutritivo del día de hoy, hablaremos de las listas, las cuales son estructuras de datos unidimensionales, sólo tienen largo, pero a diferencia de los vectores cada uno de sus elementos puede ser de diferente tipo o incluso de diferente clase, por lo que son estructuras heterogéneas. Así podemos crear listas que contengan datos atómicos, vectores, matrices, arrays, data frames, así el largo de una lista es igual al número de elementos que contiene, sin importar de qué tipo o clase sean</p>
+<p>Para crear una lista usamos la función <res>list()</res>, que nos pedirá los elementos que deseamos incluir en nuestra lista. Para esta estructura, no importan las dimensiones o largo de los elementos que queramos incluir en ella, como observamos a continuación:</p>
+<pre class="r"><code>mi_vector &lt;- 1:10
+mi_matriz &lt;- matrix(1:4, nrow = 2)
+mi_df     &lt;- data.frame(&quot;num&quot; = 1:3, &quot;letra&quot; = c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;))
+
+mi_lista &lt;- list(&quot;un_vector&quot; = mi_vector, &quot;una_matriz&quot; = mi_matriz, &quot;un_df&quot; = mi_df)
+
+mi_lista</code></pre>
+<pre><code>## $un_vector
+##  [1]  1  2  3  4  5  6  7  8  9 10
+## 
+## $una_matriz
+##      [,1] [,2]
+## [1,]    1    3
+## [2,]    2    4
+## 
+## $un_df
+##   num letra
+## 1   1     a
+## 2   2     b
+## 3   3     c</code></pre>
+<p>Como podemos observar tenemos nuestros datos ingresados en nuestra lista y nos muestra su organización. Ahora procederemos a llamar un único elemento de nuestra lista, esto lo realizaremos ingresando el nombre de la lista creada y enseguida digitamos el operador <res>$</res> (Signo dolar), como lo haremos en el siguiente código</p>
+<pre class="r"><code>mi_lista$un_vector </code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<pre class="r"><code># Llamamos al elemento &quot;un_vector&quot;</code></pre>
+<blockquote>
+<p><img src="https://i.ibb.co/Wkj4z61/alerta.gif" width="100" />
+Atención, atención!!!</p>
+Pa´tener en cuenta: no es posible vectorizar operaciones aritméticas usando una lista!
+</blockquote>
+</div>
+<div id="resumen" class="section level2">
+<h2>Resumen</h2>
+<p>Listo!!!</p>
+<p>Hemos finalizado este interesante y nutritivo post, el cual estuvo lleno de muchas cosas pa’ aprender y muchas otras pa’ digerir, pasamos por un breve aprendizaje sobre la exploración de datos (el cual trataremos más a fondo, en nuestras próximas entregas), hasta toda la información sobre la estructura y tipos de datos, ya sabes que hay datos tipos núméricos, caracteres, entre otros, y su organización como los vectores, data frames y las listas.</p>
+<p>Con esta información esperamos que vayas conociendo de mejor manera tus datos y como R nos ayuda a tratarlos. No temas e intenta jugar con las funciones y dataframes que R nos proporciona, no importa que vayas teniendo errores, es normal, todos pasamos por estas y si necesitas algo, aquí estaremos!!!</p>
+<p><br>
+<br>
+<br></p>
+<hr />
+<p>Bibliografía:</p>
+<p><a href="https://bookdown.org/jboscomendoza/r-principiantes4/data-frames.html">R para principiantes</a></p>
+<p><a href="https://rstudio-pubs-static.s3.amazonaws.com/330387_5a40ca72c3b14824acedceb7d34618d1.html">Guía completa de Markdown y su integración con R</a></p>
+<p><a href="https://bookdown.org/gboccardo/manual-ED-UCH/">RStudio para Estadística Descriptiva en Ciencias Sociales</a></p>
+<p><a href="https://derek-corcoran-barrios.github.io/Libro/_book/index.html">Manipulación de datos e investigación reproducible en R</a></p>
+<p><a href="https://rsanchezs.gitbooks.io/ciencia-de-datos-con-r/content/">Ciencia de datos con R</a></p>
+</div>

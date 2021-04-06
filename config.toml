@@ -184,7 +184,6 @@ link = "https://www.instagram.com/rbiologiacol/"
 icon = "ti-github" # themify icon pack : https://themify.me/themify-icons
 link = "https://github.com/RBiologos/Posts"
 
-
 ################################ Lenguaje Español ########################
 [Languages.es]
 languageName = "ES"
