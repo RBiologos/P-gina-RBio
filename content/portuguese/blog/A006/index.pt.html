@@ -1,0 +1,254 @@
+---
+title: Então ... Como faço o upload dos meus dados?
+author: David Vanegas
+date: '2021-04-13'
+image: "https://i.ibb.co/jfzCCj8/Port.png"
+slug: []
+categories:
+  - R
+tags:
+  - R
+  - RStudio
+  - Leitura
+---
+
+<script src="{{< blogdown/postref >}}index.pt_files/header-attrs/header-attrs.js"></script>
+
+
+<blockquote>
+<p>Uma das etapas mais simples, mas geralmente a mais problemática em nossos projetos e tarefas em R, é o carregamento de dados.</p>
+</blockquote>
+<center>
+<img src="https://i.ibb.co/68N8Mmw/preo.gif" width="300" />
+</center>
+<p><br></p>
+<p>Isso ocorre porque muitas vezes não sabemos sobre a natureza de nossos dados e mesmo que R seja uma ótima ferramenta, este programa só lê dados (* não intenções *) e não será capaz de fazer tudo por nós.</p>
+<p>Portanto, neste post vamos aprender como importar e exportar dados nos formatos que mais manejamos, pois há uma grande quantidade deles que não vamos usar no momento. Esses dados podem ser armazenados em um arquivo em nosso computador ou apresentados como arquivos online.</p>
+<blockquote>
+<p><img src="https://i.ibb.co/Wkj4z61/alerta.gif" width="100" />
+Atenção, atenção!!!</p>
+Antes de iniciar nosso carregamento de dados, devemos levar em consideração os seguintes aspectos para trabalhar com nossos dados e arquivos
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>Devemos evitar nomes, valores ou campos com espaços em branco. Este erro é muito comum, pois R interpreta cada espaço em branco como uma variável, resultando em erros relacionados ao número de elementos em nosso conjunto de dados</li>
+<li>Escolha nomes curtos ao invés de longos, isso vai te ajudar muito para poder trabalhar com os dados dentro do programa, não é o mesmo que digitar o lugar chamado “portão amarelo próximo à pousada da fazenda La Primorosa localizada no município de … blá blá blá”para ter em mente que esse site será chamado de “site1”</li>
+<li>Evite usar os seguintes símbolos em nomes:?, $,%, ^, &amp;, *, (,), -, #,?, ,, &lt;,&gt;, /, |, , [,], {e} .</li>
+<li>Exclua qualquer comentário que inserimos em nossos arquivos para evitar dados extras, caso contrário, valores diferentes serão inseridos em nosso arquivo</li>
+</ol>
+<p>Agora sim, o que viemos!</p>
+<center>
+<img src="https://i.ibb.co/Hn4rYJn/feliz.gif" width="300" />
+</center>
+<div id="lendo-arquivos-.txt" class="section level2">
+<h2>Lendo arquivos <strong><em>.txt</em></strong></h2>
+<p>É o tipo de arquivo mais popular em nossos computadores. Este é um arquivo de texto simples, então será um pouco mais fácil de manusear, raramente exigindo mais argumentos do que o especificado. Para importá-lo para nosso banco de dados R, precisaremos apenas da função <res>read.table()</res>, lembre-se de que se precisar de informações sobre esta função, você pode digitar <res>?Read.table()</res>.</p>
+<p>A função <res>read.table()</res> possui vários argumentos para poder ler arquivos. Os mais importantes são:</p>
+<ul>
+<li><res>file</res>: localização do arquivo.</li>
+<li><res>header</res>: se tem ou não uma linha com os nomes das colunas.</li>
+<li><res> col.names </res>: indicamos manualmente os nomes das colunas do nosso quadro de dados, se não os tivermos</li>
+<li><res> stringsAsFactors </res>: por padrão, os campos de texto são tratados como um fator. Se quisermos que eles sejam tratados como strings, definimos esse argumento como FALSE.</li>
+<li><res>sep</res>: selecionamos o símbolo que é usado para delimitar colunas.</li>
+<li><res>dec</res>: indicamos o símbolo usado para representação decimal.</li>
+</ul>
+<p>Assim, a sintaxe básica para nossa leitura será a seguinte, na qual salvaremos nossos dados em uma variável, para poder trabalhar facilmente com eles</p>
+<blockquote>
+<p><img src="https://i.ibb.co/Wkj4z61/alerta.gif" width="100" />
+Atenção, atenção!!!</p>
+Você pode baixar este arquivo <res>.txt</res> para ver a forma dos dados e fazer exercícios de leitura em R
+</blockquote>
+<center>
+<a href="https://drive.google.com/uc?id=14drpgXNmwwy-vqjGTUvyhx2c8oBZ9Wqr&export=download"><img src="https://i.ibb.co/dfgPD3F/txt-icon.png" alt="descarga" border="0" width="150"></a>
+</center>
+<p><br></p>
+<pre class="r"><code>a&lt;-read.table(file = &quot;txt_exemplo.txt&quot;, # Nome do arquivo, 
+        # Você também pode especificar o endereço do arquivo
+        cabeçalho = FALSE, # se o cabeçalho for mostrado (VERDADEIRO) ou não (FALSO)
+        sep = &quot;&quot;, # Aqui especificamos o tipo de separador de colunas 
+        dec = &quot;.&quot;) # Tipo de sinal para especificar decimais, ponto e vírgula ou vírgulas</code></pre>
+<blockquote>
+<p>Lembre-se de que ler dados com este tipo de sintaxe é se e somente se nosso arquivo estiver hospedado no mesmo endereço do diretório R, como vimos em nosso <a href="https://rbiologos.github.io/pt/blog/a004/">POST</a>, caso contrário gerará ERROR.</p>
+</blockquote>
+<p>Se não for esse o caso e tivermos nosso arquivo em outra pasta, podemos inserir a função <res>choose.files()</res> como argumento, a fim de encontrar a pasta onde está hospedado, para que seja como segue o formulário</p>
+<pre class="r"><code>read.table(choose.files(), # Isto irá abrir uma janela para encontrar o seu arquivo
+           header = TRUE,
+           sep = &quot;,&quot;,
+           dec = &quot;.&quot;)</code></pre>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<p>Como podemos ver, nosso arquivo foi carregado com sucesso total, 5 variáveis com 6 dados cada!</p>
+<center>
+<img src="https://i.ibb.co/S6zDB90/happy.gif" width="300" />
+</center>
+<p><br></p>
+<p>Mas o que aconteceria se inserirmos os dados errados? Vamos ver alguns exemplos</p>
+<p>Neste exemplo, não especificamos o cabeçalho, espaçamento ou pontuação de nossos dados</p>
+<pre class="r"><code>read.table(choose.files(),
+           header = FALSE)</code></pre>
+<pre><code>##                                                          V1
+## 1 Sepal.Length,Sepal.Width,Petal.Length,Petal.Width,Species
+## 2                                    5.1,3.5,1.4,0.2,setosa
+## 3                                      4.9,3,1.4,0.2,setosa
+## 4                                    4.7,3.2,1.3,0.2,setosa
+## 5                                    4.6,3.1,1.5,0.2,setosa
+## 6                                      5,3.6,1.4,0.2,setosa
+## 7                                    5.4,3.9,1.7,0.4,setosa</code></pre>
+<p>Como você pode ver, nossos dados estavam desorganizados porque não especificamos a R como eles deveriam separar nossos dados, então o programa os lê como se fossem um por linha. Além disso, se você olhar para os nomes de nossas variáveis, eles se tornam mais uma informação!</p>
+<center>
+<img src="https://i.ibb.co/N6GSxfD/no.gif" width="300" />
+</center>
+<p><br></p>
+<p>Agora vamos ver este outro exemplo, onde especificamos argumentos errados no cabeçalho, em separação e pontuação</p>
+<pre class="r"><code>read.table(choose.files(),
+           header=FALSE,
+           sep = &quot;.&quot;,
+           dec = &quot;,&quot;)</code></pre>
+<pre><code>## Error in scan(file = file, what = what, sep = sep, quote = quote, dec = dec, : line 3 did not have 5 elements</code></pre>
+<p>E nosso resultado nem é mostrado, ele gera um erro imediato, R vai nos avisar que nossos dados estão errados, e podem não ser nossos dados como neste exemplo, senão que não especificamos bem nossa função de leitura.</p>
+<center>
+<img src="https://i.ibb.co/SVY9tZT/help.gif" width="300" />
+</center>
+</div>
+<div id="lendo-arquivos-.csv" class="section level2">
+<h2>Lendo arquivos <strong><em>.csv</em></strong></h2>
+<p>O formato CSV (<em>Comma Separated Values</em>) é um dos mais comuns ao trocar dados entre aplicativos. Um arquivo neste formato é um arquivo de texto, no qual cada linha é uma amostra ou ocorrência e cada coluna uma variável. Os dados em cada linha são separados uns dos outros por vírgulas, daí o nome do formato. Este tipo de dados será um pouco mais recorrente em nossa área específica.</p>
+<p>Podemos criar facilmente este tipo de arquivo no Excel como se vê nas imagens a seguir, só temos que ter em mente que não devem ser deixadas linhas vazias, não devem ser coloridas, bordas ou nada deve ser colocado.</p>
+<center>
+<img src="https://i.ibb.co/VwZDWND/final-606273fa32e29f0085e699da-364467.gif" alt="final-606273fa32e29f0085e699da-364467" border="0" class="responsive"><br>
+Salvar arquivos .csv do Excel
+</center>
+<p><br></p>
+<center>
+<img src="https://i.ibb.co/Pggh11f/Drive-csv.gif" alt="Drive-csv" border="0" class="responsive"><br>
+Salvar arquivos .csv do Googlesheets
+</center>
+<p><br></p>
+<p>Para podermos ler este tipo de arquivo precisaremos da função <res>read.csv()</res>, pois existem muitas outras funções que têm a finalidade de ler este arquivo, porém esta é a mais utilizada em geral. Os argumentos são muito semelhantes à função <res>read.table()</res></p>
+<blockquote>
+<p><img src="https://i.ibb.co/Wkj4z61/alerta.gif" width="100" />
+Atenção, atenção!!!</p>
+Você pode baixar este arquivo <res>.csv</res> para ver a forma dos dados e fazer exercícios de leitura em R
+</blockquote>
+<center>
+<a href="https://drive.google.com/uc?export=download&id=1HB8iGkt6F5z4NMog_3TkBYwq7Plsxqaw"><img src="https://i.ibb.co/6gx1V1Y/csv-icon.png" alt="descarga" border="0" width="150"></a>
+</center>
+<p><br></p>
+<pre class="r"><code>read.csv(file = &quot;csv_exemplo.csv&quot;,
+           header = TRUE,
+           sep = &quot;,&quot;,
+           dec = &quot;.&quot;)</code></pre>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<p>E assim, carregamos nosso arquivo, estamos aprendendo cada vez mais!</p>
+<center>
+<img src="https://i.ibb.co/hKs2mc4/ride.gif" width="300" />
+</center>
+</div>
+<div id="baixar-dados-online" class="section level2">
+<h2>Baixar dados online</h2>
+<p>Há uma quantidade inimaginável de dados na web que podemos baixar e usar para nossos estudos e como adoramos usar R, também existe uma maneira de baixá-los diretamente para R e não ocupar a memória do nosso PC com mais um arquivo (esclarecemos que vai usar a memória de outra forma, mas apenas quando a usarmos em nossa sessão R)</p>
+<p>Para começar, vamos usar as mesmas funções que usamos para carregar, como vimos anteriormente; a única diferença é que, ao invés de fornecer o caminho do arquivo, teremos que fornecer o caminho da internet, por meio de uma variável, como vemos neste exemplo</p>
+<pre class="r"><code>url&lt;-&quot;https://drive.google.com/uc?id=14drpgXNmwwy-vqjGTUvyhx2c8oBZ9Wqr&amp;export=download&quot;</code></pre>
+<p>Nesta etapa, salvamos apenas o endereço do arquivo online em uma variável, você pode chamá-lo de qualquer forma. Agora, vamos realizar os mesmos passos que já havíamos aprendido, só que no nome do arquivo vamos colocar nossa variável criada anteriormente</p>
+<pre class="r"><code>read.table(url, # Nós especificamos nossa variável &quot;url&quot;
+           header = TRUE,
+           sep = &quot;,&quot;,
+           dec = &quot;.&quot;)</code></pre>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<center>
+<img src="https://i.ibb.co/h7x8p9f/voil.gif" alt="voil" border="0" width="300"><br>E… voilà!!!
+</center>
+<p><br></p>
+</div>
+<div id="lendo-arquivos-.xlsx" class="section level2">
+<h2>Lendo arquivos <strong><em>.Xlsx</em></strong></h2>
+<p>Agora aprenderemos como ler arquivos <res>Excel</res>. Para isso, é necessário que tenhamos o pacote <res>readxl<res/> instalado em nosso banco de dados e lembremos que para fazer uso dele, devemos carregá-lo em nosso sistema com <res>library()<res/> função</p>
+<pre class="r"><code>install.packages(&quot;readxl&quot;)</code></pre>
+<pre class="r"><code>library(readxl)</code></pre>
+<p>Assim, os argumentos para nossa função <res>read_excel</res>, contêm as próximas diretrizes</p>
+<pre class="r"><code>folha_excel &lt;- read_excel(path = &#39;&#39;, # Endereço do arquivo
+                        sheet = &quot;iris&quot;, # Folha de arquivo para ler
+                        range = &quot;C1:E4&quot;, # Só podemos ler uma parte da folha
+                        n_max = 8) # Podemos ler uma quantidade máxima de dados</code></pre>
+<blockquote>
+<p><img src="https://i.ibb.co/Wkj4z61/alerta.gif" width="100" />
+Atenção, atenção!!!</p>
+Você pode baixar este arquivo <res>.xlsx</res> para ver a forma dos dados e fazer exercícios de leitura em R
+</blockquote>
+<center>
+<a href="https://drive.google.com/uc?id=1cN-kIyIVeyZhRcJdYFljHgyO-UuI9ucO&export=download"><img src="https://i.ibb.co/XzfKvzx/xls.png" alt="xls" border="0" width="150"></a>
+</center>
+<p><br></p>
+<pre class="r"><code>read_excel(choose.files(),
+                  sheet = &quot;iris&quot;,
+                  n_max = 6)</code></pre>
+<pre><code>## # A tibble: 6 x 5
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+##          &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;  
+## 1          5.1         3.5          1.4         0.2 setosa 
+## 2          4.9         3            1.4         0.2 setosa 
+## 3          4.7         3.2          1.3         0.2 setosa 
+## 4          4.6         3.1          1.5         0.2 setosa 
+## 5          5           3.6          1.4         0.2 setosa 
+## 6          5.4         3.9          1.7         0.4 setosa</code></pre>
+<p>Assim, podemos ver que nossos primeiros 6 dados da planilha <res>iris</res> do livro <res>xls_example</res> foram carregados com sucesso!</p>
+<center>
+<img src="https://i.ibb.co/SNryVtq/hap.gif" width="300" />
+</center>
+</div>
+<div id="importar-vários-arquivos" class="section level2">
+<h2>Importar vários arquivos</h2>
+<p>Por fim, em algumas situações nos deparamos com esta situação: ter vários arquivos para nossos projetos, o que significa ler cada um deles, e se houver, porque a tarefa se torna um pouco tediosa, portanto, aqui mostramos uma maneira de ser capaz de ler todos os nossos arquivos (tenha em mente que eles devem ter a mesma extensão) em nossa pasta de trabalho.</p>
+<p>Primeiro, obtemos uma lista de arquivos dentro da pasta em questão</p>
+<pre class="r"><code>arquivos &lt;- list.files(path = &#39;C:/Users/David/Desktop/Projeto&#39;)</code></pre>
+<p>Posteriormente, leremos todos os arquivos de uma nova lista com a função <res>lappy()</res></p>
+<pre class="r"><code>arquivos_lista &lt;- lapply(arquivos, read.csv()) 
+# Neste exemplo, leremos apenas arquivos .csv
+# Você também pode definir outros tipos de arquivos</code></pre>
+</div>
+<div id="resumo-da-postagem" class="section level2">
+<h2>Resumo da postagem</h2>
+<p>Bem, hoje nos deparamos com uma das etapas mais complexas de nossos estudos, a leitura de dados. Conseguimos aprender como importar arquivos <res>.txt</res>, <res>.csv</res> e <res>.xlsx</res>, os tipos de arquivo mais comuns que usamos na ciência. lembre-se que existem muitos outros, e se você enfrentar um deles, você pode nos escrever e nós o explicaremos ou você pode simplesmente pesquisar no google e encontrar várias referências para resolver o seu problema. Alegrar!!!</p>
+<center>
+<img src="https://i.ibb.co/yFZpsHC/Kmta.gif" width="300" />
+</center>
+</div>
+<div id="depois-de-importar-os-dados-como-faço-para-analisá-los" class="section level2">
+<h2>Depois de importar os dados <em>Como faço para analisá-los?</em></h2>
+<p>Depois de aprender a importar dados para o R, é necessário analisar nossos dados, saber com o que estamos lidando e como devemos tratá-lo … mas espere, isso é um spoiler … que virá no próximo post, que está carregado com muito mais coisas para lembrar e aprender!!</p>
+</div>
+<div id="nós-vamos-esperar-por-você" class="section level2">
+<h2><strong>Nós vamos esperar por você!!!</strong></h2>
+<br>
+<center>
+<img src="https://i.ibb.co/GMc8BTf/final.gif" width="300" />
+</center>
+<p><br></p>
+<hr />
+<p>Informação consultada</p>
+<ul>
+<li>Jakob Jenkov (2020) R - Load Data</li>
+<li>Al-Ahmadgaid Asaad in R bloggers (2013) Importing Data to R</li>
+<li>Karlijn Willems in Datacamp (2018) This R Data Import Tutorial Is Everything You Need</li>
+<li>Matias Andina (2015) Introducción a estadística con R</li>
+<li>Freddy Hernández (2012) Manual de R</li>
+<li>RCoder</li>
+<li>Mauricio Anderson (2016) Curso de R</li>
+</ul>
+</div>
