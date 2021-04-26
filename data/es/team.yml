@@ -38,3 +38,21 @@ team:
           link : "https://www.linkedin.com/in/eduardo-grajales-hernandez-29036814a/"
         - icon : ti-instagram # themify icon pack : https://themify.me/themify-icons
           link : "https://www.instagram.com/gh_bio/"
+          
+                        # team member loop
+    - name : Eliana Tabares Lara
+      image_webp : images/team/elianatabares.webp
+      image : images/team/elianatabares.png
+      designation : Editora
+      content : Bióloga, Universidad del Quindío
+      social :
+        - icon : ti-user # themify icon pack : https://themify.me/themify-icons
+          link : "https://rbiologos.github.io/author/eliana-tabares/"
+        - icon : ti-facebook # themify icon pack : https://themify.me/themify-icons
+          link : "https://www.facebook.com/eliana.tabaresl"
+        - icon : ti-twitter-alt # themify icon pack : https://themify.me/themify-icons
+          link : "https://twitter.com/ETcallhomeL"
+        - icon : ti-linkedin # themify icon pack : https://themify.me/themify-icons
+          link : "https://www.linkedin.com/in/elianatabareslara/"
+        - icon : ti-instagram # themify icon pack : https://themify.me/themify-icons
+          link : "https://www.instagram.com/eliana_tabares.l/"

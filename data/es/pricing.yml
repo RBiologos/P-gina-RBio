@@ -1,6 +1,6 @@
 ##################################### pricing ##############################
 pricing:
-  enable : true
+  enable : false
   title : Pa' saber
   pricing_table :
     # pricing table loop
