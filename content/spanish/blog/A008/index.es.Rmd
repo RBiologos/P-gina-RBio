@@ -1,7 +1,7 @@
 ---
-title: Análisis exploratorio de datos - Parte I
+title: Análisis exploratorio de Datos - Parte I
 author: David Vanegas
-date: '2021-04-27'
+date: '2021-04-28'
 image: "https://i.ibb.co/CPfzngW/1.png"
 slug: []
 categories:
@@ -49,7 +49,7 @@ En este post intentaremos darte herramientas que te permitirán analizar de una 
 Primero, vamos a importar una base de datos llamada <res>Datos</res>. De este modo, lo primero que nos interesa saber es qué atributos contiene, cuántas observaciones hay, etc.
 
 <center>
-<a href="https://doc-0c-a4-docs.googleusercontent.com/docs/securesc/6k073m1lsiqe2vooa32ks6mrs48uj5pi/jal6pi03phbb3oduunitil3f6dqahmf6/1619573175000/14867233862106753132/14867233862106753132/1TA7b4TuUub7KtyP_huoUO-TCFpeuyIPa?e=download&authuser=3&nonce=qou0054eoa7ce&user=14867233862106753132&hash=77ns5f4cpmdvkg48id5g5bh5dnvtskcf"><img src="https://i.ibb.co/6gx1V1Y/csv-icon.png" alt="descarga" border="0" width="150"></a>
+<a href="https://min.gitcdn.link/repo/RBiologos/Pagina-RBio/main/content/spanish/blog/A008/DungBeetles.csv"><img src="https://i.ibb.co/6gx1V1Y/csv-icon.png" alt="descarga" border="0" width="150"></a>
 </center><br>
 
 ```{r}
@@ -132,7 +132,7 @@ head(oper)
 ![](https://i.ibb.co/pd1FLr8/ice-king.gif){width="350"}
 </center><br>
 
-Observa que hemos creado una nueva variable <res>disp_4</res> a partir de nuestros datos, multiplicamos nuestra variable por 2 y es por esto, que cada uno de sus datos realiza la operación que le ordenamos.
+Observa que hemos creado una nueva variable <res>disp_4</res> a partir de nuestros datos, multiplicamos nuestra variable <res>disp_2</res> por 2. Con esta orden la función va a tomar cada dato de la variable y aplicará la operación matemática establecida.
 
 ## Rondeo de números
 
@@ -144,16 +144,16 @@ Otra operación importante es el redondeo de números. Lo primero que tenemos qu
 
 ### ***Round***
 
-Nos devuelve un valor numérico redondeado a los dígitos que le digamos. Es lo que podríamos llamar el redondeo clásico.
+Nos devuelve un valor numérico decimal redondeado a los dígitos que le digamos. Es lo que podríamos llamar el redondeo clásico.
 
 ```{r}
 disperound <- disper
 
-# Redondearemos a 2 cifras nuestra variable disper_1
+# Redondearemos a 2 cifras decimales nuestra variable disper_1
 disperound$disp_1 <- round(disperound$disp_1, 2)
-# Redondearemos a 1 cifra nuestra variable disper_2
+# Redondearemos a 1 cifra decimal nuestra variable disper_2
 disperound$disp_2 <- round(disperound$disp_2, 1)
-# Redondearemos a 0 cifras nuestra variable disper_3
+# Redondearemos a 0 cifras decimales nuestra variable disper_3
 disperound$disp_3 <- round(disperound$disp_3, 0)
 
 head(disperound)
@@ -333,14 +333,9 @@ El filtrado se utiliza con el fin de seleccionar un subconjunto del data.frame q
 
 Para usar el filtrado de manera efectiva, se debe saber cómo seleccionar las observaciones que se desean, utilizando los operadores de comparación. R proporciona el paquete estándar: 
 
-- & (y)
-- | (o)
-- > (mayor que)
-- >= (mayor o igual que)
-- < (menor que)
-- <= (menor o igual que)
-- != (diferente a)
-- == (igual a)
+<center>
+![](https://i.ibb.co/q5c2PLB/operador.png){width="350"}
+</center><br>
 
 Acá te presentamos un pequeño gráfico del funcionamiento de los operadores <res>&</res> y <res>|</res>
 
