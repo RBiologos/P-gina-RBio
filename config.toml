@@ -69,16 +69,10 @@ url = "feature"
 weight = 4
 
 [[Languages.es.menu.main]]
-name = "Tienda Colombia"
-pre = "#"
-url = "portfolio"
-weight = 5
-
-[[Languages.es.menu.main]]
 name = "Contacto"
 pre = "#"
 url = "contact"
-weight = 6
+weight = 5
 
 ################### English Navigation ########################
 [[Languages.en.menu.main]]
